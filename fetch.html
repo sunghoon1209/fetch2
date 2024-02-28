@@ -11,18 +11,18 @@
         // enc rYAZYjjG%2BRGrXMKQXyuGdPuPmBEZKO12eTx6mRDnEI37OgarFsKrohprNDU1iN8EiHINkbA6hBiz3cSy6SmJdw%3D%3D
         // dec rYAZYjjG+RGrXMKQXyuGdPuPmBEZKO12eTx6mRDnEI37OgarFsKrohprNDU1iN8EiHINkbA6hBiz3cSy6SmJdw==
         const requestURL = 'http://apis.data.go.kr/B490007/qualExamSchd/getQualExamSchdList'
-        const apiKey = 'rYAZYjjG%2BRGrXMKQXyuGdPuPmBEZKO12eTx6mRDnEI37OgarFsKrohprNDU1iN8EiHINkbA6hBiz3cSy6SmJdw%3D%3D';
+        // const apiKey = 'rYAZYjjG%2BRGrXMKQXyuGdPuPmBEZKO12eTx6mRDnEI37OgarFsKrohprNDU1iN8EiHINkbA6hBiz3cSy6SmJdw%3D%3D';
 
 
         const params = new URLSearchParams({
-            ServiceKey: apiKey,
+            // ServiceKey: apiKey,
             pageNo: 1,
             numOfRows: 4,
             dataFormat: 'json',
             implYy: 2023,
            }).toString();
 
-        fetch(requestURL)
+        fetch('https://goweather.herokuapp.com/weather/Gangneung')
             .then((res) => res.json())
             .then((data) => console.log(data));            
 
