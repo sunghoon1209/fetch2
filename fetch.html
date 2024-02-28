@@ -10,24 +10,25 @@
     <script>
         // enc rYAZYjjG%2BRGrXMKQXyuGdPuPmBEZKO12eTx6mRDnEI37OgarFsKrohprNDU1iN8EiHINkbA6hBiz3cSy6SmJdw%3D%3D
         // dec rYAZYjjG+RGrXMKQXyuGdPuPmBEZKO12eTx6mRDnEI37OgarFsKrohprNDU1iN8EiHINkbA6hBiz3cSy6SmJdw==
-        const requestURL = 'https://cors.bridged.cc/apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst'
+        const requestURL = 'Call Back URL	http://apis.data.go.kr/B490007/qualExamSchd/getQualExamSchdList'
         const apiKey = 'rYAZYjjG%2BRGrXMKQXyuGdPuPmBEZKO12eTx6mRDnEI37OgarFsKrohprNDU1iN8EiHINkbA6hBiz3cSy6SmJdw%3D%3D';
 
 
         const params = new URLSearchParams({
             ServiceKey: apiKey,
-            pageNo: 10,
+            pageNo: 1,
             numOfRows: 4,
-            dataType: 'json',
-            base_date: 20240220,
-            base_time: "0500",
-            nx: 55,
-            ny: 127
-        }).toString();
+            dataFormat: 'json',
+            implYy: 2023,
+           }).toString();
 
         fetch(`${requestURL}${params}`)
             .then((res) => res.json())
             .then((data) => console.log(data));
+
+            
+
+
        
         
         
